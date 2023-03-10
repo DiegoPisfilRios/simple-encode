@@ -5,7 +5,7 @@ document.getElementById('encode').onclick = () => {
 
 document.getElementById('decode').onclick = () => {
     var str = document.getElementById('out').value
-    document.getElementById('ini').value = atob(decode(str));
+    document.getElementById('ini').value = decode(atob(str));
 }
 
 function encode (str) {
