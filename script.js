@@ -1,11 +1,11 @@
 document.getElementById('encode').onclick = () => {
-    var str = document.getElementById('in').value
-    document.getElementById('out').value =  btoa(encode(str));
+    var str = document.getElementById('in-code').value
+    document.getElementById('out').innerText =  btoa(encode(str));
 }
 
 document.getElementById('decode').onclick = () => {
-    var str = document.getElementById('out').value
-    document.getElementById('ini').value = decode(atob(str));
+    var str = document.getElementById('in-deco').value
+    document.getElementById('ini').innerText = decode(atob(str));
 }
 
 function encode (str) {
