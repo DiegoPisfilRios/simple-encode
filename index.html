@@ -13,6 +13,10 @@
   <!-- CDN ICONS -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+</style>
+  
 </head>
 
 <body>
@@ -28,12 +32,17 @@
         <div class="ghost"></div>
     
         <div class="arrow-1">
-          <i class="ri-arrow-right-line"></i> 
+          <div>
+            <div></div>
+            <i class="ri-arrow-right-line"></i> 
+          </div>
         </div>
         
         <div>
-          <label for="" class="mb-1">Texto codificado</label>
-          <p id="out"></p>
+          <div>
+            <label for="" class="mb-1">Texto codificado</label>
+            <p id="out">...</p>
+          </div>
         </div>
       </div>
   
@@ -41,16 +50,22 @@
       
       <div class="content block-2">
         <div>
-          <label for="" class="mb-1">Texto decodificado</label>
-          <p id="ini"></p>
+          <div>
+            <label for="" class="mb-1">Texto decodificado</label>
+            <p id="ini">...</p>
+          </div>
         </div>
       
         <div class="arrow-2">
-          <i class="ri-arrow-left-line"></i>
+           <div>
+              <i class="ri-arrow-left-line"></i>
+              <div></div>
+           </div>
         </div>
     
         <div class="ghost"></div>
-          <div class="card">
+        
+        <div class="card">
           <label for="" class="mb-1">Ingresa texto</label>
           <input id="in-deco" class="form-control" type="text" placeholder="Texto a decodificar">
           <button id="decode" class="btn btn-info">DECODIFICAR</button>

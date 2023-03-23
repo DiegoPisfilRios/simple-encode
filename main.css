@@ -1,5 +1,16 @@
+:root {
+  --color-wallpaper: #f7f6f0;
+  --color-primary: #d3f36b;
+  --color-dark: #24282c;
+  --color-light: #ffffff;
+}
+
 body {
-  background: #ebeced;
+  background: var(--color-wallpaper);
+}
+
+p, label, input, button {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 main {
@@ -25,6 +36,7 @@ div.card {
 div.content {
   display: grid;
   grid-template-columns: auto auto;
+  gap: .5rem;
 }
 
 div.content > div {
@@ -35,8 +47,8 @@ div.content > div {
 
 section {
   position: relative;
-  min-height: 30rem;
-  min-width: 34rem;
+  min-height: 31.37rem;
+  min-width: 38rem;
   /*border: 1px solid green;*/
   padding: 5px;
 }
@@ -47,10 +59,113 @@ section {
 
 .block-1 {
   bottom: 0;
-  left: 0,
+  left: 0;
 }
 
 .block-2 {
   top: 0 ;
   right: 0;
+}
+
+/* BLOCK 1 */
+.block-1 > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.block-1 > div:last-child > div {
+  background-color: var(--color-dark);
+  padding: 1rem;
+  border-radius: 6px;
+}
+.block-1 > div:last-child p {
+  background-color: #fff;
+  min-height: 24px;
+  width: 100%;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.arrow-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.arrow-1 > div {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+}
+
+.arrow-1 > div > div {
+  width: 5rem;
+  border-left: 2px dashed #000;
+  border-bottom: 2px dashed #000;
+  border-bottom-left-radius: 20px;
+  height: 100%;
+}
+
+.arrow-1 > div > i {
+  margin-bottom: -7px;
+  margin-left: -4px;
+}
+
+/* BLOCK 2 */
+
+.block-2 > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.block-2 > div:first-child > div {
+  background-color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.block-2 > div:first-child p {
+  background-color: #fff;
+  min-height: 24px;
+  width: 100%;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.arrow-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.arrow-2 > div {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2.5rem;
+}
+
+.arrow-2 > div > div {
+  width: 5rem;
+  border-right: 2px dashed #000;
+  border-top: 2px dashed #000;
+  border-top-right-radius: 20px;
+  height: 100%;
+}
+
+.arrow-2 > div > i {
+  margin-top: -7px;
+  margin-left: -4px;
+}
+
+
+/* controls */
+input[type='text'] {
+  border: 0px;
+  padding: 2px 6px;
+  background-color: ;
 }
