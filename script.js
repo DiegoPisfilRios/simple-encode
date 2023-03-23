@@ -42,3 +42,21 @@ function decode(str) {
     }
     return str
 }
+
+function onCopy(str) {
+    console.log(str)
+    let text = document.querySelector(`#${str}`).innerText
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            console.log('copiiiii')
+            document.querySelector('#pop-copy').classList.add('show')
+            setTimeout(()=>{
+                document.querySelector('#pop-copy').classList.add('hidden')
+            }, 1000)
+           
+        }, (err) => {
+            console.log(err)
+        })
+         document.querySelector('#pop-copy').classList.remove('show');
+            document.querySelector('#pop-copy').classList.remove('hidden');
+}

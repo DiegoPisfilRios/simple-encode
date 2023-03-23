@@ -13,68 +13,86 @@
   <!-- CDN ICONS -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-</style>
-  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+  </style>
+
 </head>
 
 <body>
   <main>
     <section>
-      <div class="content block-1">
-        <div class="card">
-          <label for="" class="mb-1">Ingresa texto</label>
-          <input id="in-code" class="form-control" type="text" placeholder="Texto a codificar">
-          <button id="encode" class="btn btn-dark">CODIFICAR</button>
-        </div>
-  
-        <div class="ghost"></div>
-    
-        <div class="arrow-1">
-          <div>
-            <div></div>
-            <i class="ri-arrow-right-line"></i> 
-          </div>
-        </div>
-        
+      <div>
+        <h1>EnKids.</h1>
         <div>
-          <div>
-            <label for="" class="mb-1">Texto codificado</label>
-            <p id="out">...</p>
-          </div>
+          <img src="./picture.svg" alt="">
         </div>
+        <p>
+          Ingresa cualquier texto, y como resultado obtendras una cadena encriptada y convertida a B64. Es una encriptación sencilla la cual no se recomienda para uso formal.
+        </p>
+        <a href="#section-2"><i class="ri-arrow-down-line"></i></a>
       </div>
-  
-  
-      
-      <div class="content block-2">
-        <div>
+    </section>
+    <section id="section-2">
+      <section>
+        <div class="content block-1">
+          <div class="card">
+            <label>Ingresa texto</label>
+            <textarea id="in-code" class="form-control" type="text" placeholder="Texto a codificar"></textarea>
+            <button id="encode" class="btn btn-dark">CODIFICAR</button>
+          </div>
+
+          <div class="ghost"></div>
+
+          <div class="arrow-1">
+            <div>
+              <div></div>
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </div>
+
           <div>
-            <label for="" class="mb-1">Texto decodificado</label>
-            <p id="ini">...</p>
+            <div>
+              <label class="out-title">Resultado</label>
+              <button class="btn-copy" onclick="onCopy('out')"><i class="ri-file-copy-line"></i></button>
+              <p id="out">[...]</p>
+            </div>
           </div>
         </div>
-      
-        <div class="arrow-2">
-           <div>
+
+        <div class="content block-2">
+          <div>
+            <div>
+              <label class="out-title">Resultado</label>
+              <button class="btn-copy" onclick="onCopy('ini')"><i class="ri-file-copy-line"></i></button>
+
+              <p id="ini">[...]</p>
+            </div>
+          </div>
+
+          <div class="arrow-2">
+            <div>
               <i class="ri-arrow-left-line"></i>
               <div></div>
-           </div>
+            </div>
+          </div>
+
+          <div class="ghost"></div>
+
+          <div class="card">
+            <label>Ingresa texto</label>
+            <textarea id="in-deco" class="form-control" placeholder="Texto a decodificar"></textarea>
+            <button id="decode" class="btn btn-info">DECODIFICAR</button>
+          </div>
         </div>
-    
-        <div class="ghost"></div>
-        
-        <div class="card">
-          <label for="" class="mb-1">Ingresa texto</label>
-          <input id="in-deco" class="form-control" type="text" placeholder="Texto a decodificar">
-          <button id="decode" class="btn btn-info">DECODIFICAR</button>
-        </div>
-      </div>
+      </section>
     </section>
   </main>
 
+  <span id="pop-copy">¡Copiado!</span>
+
   <script src="script.js"></script>
+
 </body>
 
 </html>
